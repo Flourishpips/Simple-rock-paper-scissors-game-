@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Rock Paper Scissors</title>
+</head>
+<body class="bg-black text-white">
+    <p class="font-bold text-[30px] m-5 mt-10">Rock Paper Scissors</p>
+    <button onclick="
+        playGame('rock');
+    " class="border-2 rounded-full w-[100px] h-[100px] m-5 cursor-pointer">
+    <img src="assets/rock-emoji.png" alt="rock" class="move-icon h-[50px] justify-self-center"></button>
+
+    <button onclick="
+        playGame('paper');
+    " class="border-2 rounded-full w-[100px] h-[100px] cursor-pointer">
+    <img src="assets/paper-emoji.png" alt="paper" class="move-icon h-[50px] justify-self-center"></button>
+
+    <button onclick="
+        playGame('scissors');
+    "  class="border-2 rounded-full w-[100px] h-[100px] m-5 cursor-pointer"  >
+    <img src="assets/scissors-emoji.png" alt="scissors" class="move-icon h-[50px] justify-self-center"></button>
+
+    <p class="js-result ml-5 text-[25px] font-bold mt-[50px]"></p>
+
+    <p class="js-moves ml-5 m-[50px] flex items-end">
+       
+    </p>
+
+    <p class="js-score ml-5"></p>
+
+    <button onclick = "
+        scores.wins = 0;
+        scores.losses = 0;
+        scores.ties = 0;
+        localStorage.removeItem('scores');
+        updateScoreElement();
+    " class="ml-5 bg-white text-black mt-2 py-2 px-4 font-bold cursor-pointer">Reset score</button>
+
+
+    <script src="10-ro-pa-sc.js">
+       
+    </script>
+</body>
+</html>
